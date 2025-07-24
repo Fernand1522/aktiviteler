@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eğitsel Oyunlar</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Scheherazade+New:wght@400;500;600;700&family=Winky+Rough&display=swap" rel="stylesheet">
+    <style>
+        /* Common styles for both pages */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: white;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23efefef' fill-opacity='0.3' fill-rule='evenodd'/%3E%3C/svg%3E");
+            background-attachment: fixed;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2px;
+            box-sizing: border-box;
+            min-height: 100vh;
+        }
+
+        .white-rounded-box {
+            background-color: transparent;
+            padding: 2vh;
+            max-width: 100%;
+            text-align:center;
+            display: flex;
+            flex-direction: column;
+			height:100%;
+        }
+
+        h1 {
+            font-family: "National Park", sans-serif;
+            font-size: 24px;
+            color: black;
+            padding: 0;
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            margin-bottom:2vh;
+			margin-top:1vh;
+            min-height: 40px; /* Ensure consistent height for the title area */
+            display: flex; /* Use flexbox for vertical alignment */
+            align-items: center; /* Vertically center text */
+            justify-content: center; /* Horizontally center text */
+            box-sizing: border-box; /* Include padding in height calculation */
+            overflow: hidden; /* Hide overflow if text is still too long */
+            white-space: nowrap; /* Keep text on a single line */
+            text-overflow: ellipsis; /* Add ellipsis if text overflows */
+        }
+
+        /* Styles for different font sizes based on title length */
+        h1.medium-font {
+            font-size: 18px; /* For titles between 26 and 40 characters */
+        }
+
+        h1.small-font {
+            font-size: 14px; /* For titles longer than 40 characters */
+        }
+
+        /* Image Placeholder */
+        .imgHold {
+            background-color: rgb(230,230,230);
+            border-radius: 16px;
+            /* Remove fixed height/min-height */
+            /* min-height: 40%; */
+            /* height: 40%; */
+            
+            /* Add aspect ratio trick */
+            width: 100%; /* Ensure it takes full width of its container */
+            padding-top: 75%; /* 4:3 Aspect Ratio (3 / 4 * 100%) */
+            position: relative; /* Needed for absolute positioning of potential child elements */
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border: solid 1px rgb(240,240,240);
+			background-image:url("img/00.jpg");
+        }
+
+        .ustt {
+            color:rgba(0,0,0,.4); text-align:center; font-size:12px;
+        }
+		
+		.cizgi1 {
+		width:100%;background-color:rgb(250,250,250);min-height:1px;margin:0;margin-top:1vh;
+		}
+		.cizgi2 {
+		width:100%;background-color:rgb(240,240,240);min-height:1px;margin:0;margin-bottom:1vh;
+		}
+
+        .ustt:hover {text-decoration:underline;color:gray;}
+        
+        .myButton, .myButtonM, .myButtonZ, .myButtonP {
+            border-radius:2vh;
+            border:1px solid;
+            display:inline-flex;
+            cursor:pointer;
+            font-family:Arial;
+            font-size:15px;
+            font-weight:bold;
+            padding:6px 24px;
+            text-decoration:none;
+            justify-content: center;
+            align-items: center;
+            margin-bottom:1vh;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .myButton {
+            box-shadow:inset 0px 1px 0px 0px rgb(200,255,200);
+            background-color:rgb(40,160,40);
+            border-color:rgb(0,100,0);
+            color:#306108;
+            text-shadow:0px 1px 0px #aade7c;
+        }
+        .myButton:active {
+            background:linear-gradient(to bottom, rgb(60,180,60) 5%, rgb(80,200,80) 100%);
+        }
+
+        .myButtonM {
+            box-shadow:inset 0px 1px 0px 0px rgb(255,180,220);
+            background-color:rgb(120,40,80);
+            border-color:rgb(60,20,20);
+            color:#ffffff;
+            text-shadow:0px 1px 0px #1570cd;
+        }
+        .myButtonM:active {
+            background:linear-gradient(to bottom, rgb(140,60,100) 5%, rgb(160,80,120) 100%);
+        }
+		
+        .myButtonZ {
+            box-shadow:inset 0px 1px 0px 0px rgb(220,180,255);
+            background-color:rgb(80,50,120);
+            border-color:rgb(40,20,40);
+            color:#ffffff;
+            text-shadow:0px 1px 0px #1570cd;
+        }
+        .myButtonZ:active {
+            background:linear-gradient(to bottom, rgb(100,70,140) 5%, rgb(120,90,160) 100%);
+        }
+
+        .myButtonP {
+            box-shadow:inset 0px 1px 0px 0px rgb(200,200,255);
+            background-color:rgb(10,100,140);
+            border-color:rgb(20,20,60);
+            color:#ffffff;
+            text-shadow:0px 1px 0px #9b14b3;
+        }
+        .myButtonP:active {
+            background:linear-gradient(to bottom, rgb(30,120,160) 5%, rgb(50,140,180) 100%);
+        }
+
+		.myButtonZ.disabled,
+        .myButton.disabled,
+        .myButtonM.disabled,
+        .myButtonP.disabled {
+            background: #6c757d !important;
+            cursor: not-allowed !important;
+            pointer-events: none !important;
+            box-shadow: none !important;
+            border-color: #495057 !important;
+            color: #dee2e6 !important;
+            text-shadow: none !important;
+        }
+
+		.myButtonZ.disabled img,
+        .myButton.disabled img,
+        .myButtonM.disabled img,
+        .myButtonP.disabled img {
+            filter: grayscale(100%) brightness(120%);
+            opacity: 0.7;
+        }
+
+        .myButton img, .myButtonM img, .myButtonZ img,.myButtonP img {
+            width: 100%;
+            height: auto;
+        }
+        
+        @media (max-width: 767px) {
+            .white-rounded-box {
+            }
+            h1 {
+                font-size: 3vh;
+            }
+            h1.medium-font {
+                font-size: 2.5vh; /* Adjust for mobile if needed */
+            }
+            h1.small-font {
+                font-size: 2vh; /* Adjust for mobile if needed */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="gameDetailContainer" class="white-rounded-box">
+        <h1 id="gameTitle">JavaScript'i Etkinleştirin</h1>
+		<div class="cizgi1"></div><div class="cizgi2"></div>
+        <div class="imgHold"></div>
+		<div class="cizgi1"></div><div class="cizgi2"></div>
+
+<a class="myButton" id="downloadButton" href="pdf/01.pdf" title="İndir" download="01.pdf">
+            <img src="img/indir.svg" alt="İçeriği İndir">
+        </a>
+
+        <a class="myButtonP" href="liste.html" title="Tüm Oyunlar">
+            <img src="img/allgames.svg" alt="Tüm Oyunlar"/>
+        </a>
+        <a class="myButtonZ" id="nextGame" href="#" title="Sonraki Oyuna Git">
+            <img src="img/next.svg" alt="Sonraki Oyuna Git"/>
+        </a>
+
+        <a class="myButtonM" id="prevGame" href="#" title="Önceki Oyuna git">
+            <img src="img/prev.svg" alt="Önceki Oyuna Git"/>
+        </a>
+		<div class="cizgi1"></div><div class="cizgi2"></div>
+        <p class="ustt">İlkokullar için İngilizce Öğretiminde Eğitsel Oyunlar<br>@2025 Ahmed KAP.</p>
+		
+		<br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+    <script>
+        // Data for all the games
+        const gameTitles = {
+            "01": "Göster ve Söyle", "02": "Tak Tak!", "03": "Top Sende", "04": "Sağol Dostum",
+            "05": "Çevir Bakalım", "06": "Kulağını Dört Aç", "07": "Yolu Takip Et", "08": "Adımla",
+            "09": "Baş Ressam", "10": "Sayı Dizisi", "11": "Buldum!", "12": "Bu Rengi Sever Misin?",
+            "13": "Bukalemun Topu", "14": "Renkli Seksek", "15": "Hangi Renksin?", "16": "Renkli Rakamlarla Tombala",
+            "17": "Çevirme Var", "18": "Trafik", "19": "Kendine Dokun", "20": "Labirent",
+            "21": "Vücudumuzun Ritmi", "22": "Arkadaşını Bul", "23": "Evcil Hayvanımı Gören Oldu mu?",
+            "24": "Sever misin?", "25": "Meyvelerle Tombala", "26": "Kutudan Bir Hareket Kap",
+            "27": "Harika Kutu", "28": "Hayvanı Bil", "29": "Seviyor Sevmiyor", "30": "Odadaki Fil",
+            "31": "Becerikli Hayvanlar", "32": "Hangi Sayıyım?", "33": "Kare Kapmaca", "34": "Tanışalım",
+            "35": "Aile Dedektifi", "36": "Bu Kimdir?", "37": "Top Atarak Tanış", "38": "Yeteneğimi Bil",
+            "39": "On iki Duygulu Seksek", "40": "Ben Hangi Duyguyum?", "41": "Tek mi Görüyorsun, Çift mi?",
+            "42": "Kartlarla Renkleri Keşfet", "43": "Renkleri Karton Kutulara Gönder!",
+            "44": "Sende Var mı?", "45": "Şekil Çemberi", "46": "Şekiller ve Boyutları", "47": "Ben Neyim?",
+            "48": "Kavanozdaki Evim", "49": "Pişman Afet", "50": "Neredesin?", "51": "Yön Bulma",
+            "52": "Ulaşım Biletleri", "53": "Hava Durumu", "54": "Hayvanlı Basketbol",
+            "55": "Düğümleri Çöz", "56": "İzninizle Efendim", "57": "Bayraktar",
+            "58": "Çarkı Döndür, Hareketi Söyle", "59": "Küme Karşılaşması", "60": "Ülke ve Milliyet",
+            "61": "Bil ve Fethet Oyunu", "62": "Tanışma", "63": "Harita Dedektifleri",
+            "64": "Bayraklı Kapatma", "65": "İtirazım Var!", "66": "Sen Söyle!", "67": "Ben de, Ben de!", "68": "Bebek Uyuyor",
+            "69": "Kelebek Olmak İstiyorum", "70": "Kim Yapar?", "71": "Saat Kartları",
+            "72": "Günleri Bul", "73": "Kağıttan Kedi", "74": "Bilge Saymın", "75": "Nereye Koydun?",
+            "76": "Torbadan Meslek", "77": "Galiba İş Yerimi Kaybettim!", "78": "Çalışma Yeri Bulmacası",
+            "79": "Havalar Nasıl?", "80": "Üzgünüm ki Hayır", "81": "Alabilir miyim?",
+            "82": "Mevsimler ve Kıyafetler", "83": "Kişiler ve Kimlikleri", "84": "Seçtiğim Kişiyi Tahmin Et",
+            "85": "Roket Yapmaca", "86": "Aç mısın, Susuz mu?"
+        };
+
+        // List of games that have a downloadable PDF file
+        const availableDownloads = [
+            "01", "05", "08", "09", "10", "11", "16", "18", "19", "20",
+            "23", "24", "25", "26", "29", "30", "31", "32", "33", "36", "39", "40",
+            "41", "42", "43", "44", "47", "49", "50", "52", "53", "58", "59",
+            "61", "64", "65", "67", "69", "70", "71", "72", "73", "75", "76", "77", "78", "79",
+            "81", "82", "83", "84", "85", "86"
+        ];
+
+        // Get references to the HTML elements
+        const gameTitleElement = document.getElementById('gameTitle');
+        const imgHoldElement = document.querySelector('.imgHold'); // Get the imgHold div
+        const downloadButton = document.getElementById('downloadButton');
+        const nextGameButton = document.getElementById('nextGame');
+        const prevGameButton = document.getElementById('prevGame');
+
+        // Get the 'oyun' parameter from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const paramsValue = urlParams.get('oyun');
+
+        // Get all game keys and sort them numerically for navigation
+        const sortedGameKeys = Object.keys(gameTitles).sort((a, b) => parseInt(a) - parseInt(b));
+
+        if (paramsValue && gameTitles[paramsValue]) {
+            // A valid game key is in the URL
+            const currentTitle = gameTitles[paramsValue];
+            const currentImageSrc = `res/${paramsValue}.jpg`;
+
+            // Update the page title and game title
+            document.title = currentTitle; // Set the browser tab title
+            gameTitleElement.textContent = currentTitle;
+
+            // Adjust font size based on title length to keep height consistent
+            gameTitleElement.classList.remove('medium-font', 'small-font'); // Remove existing classes first
+            if (currentTitle.length > 40) {
+                gameTitleElement.classList.add('small-font');
+            } else if (currentTitle.length > 25) {
+                gameTitleElement.classList.add('medium-font');
+            }
+
+            // Load image and set as background for imgHold
+            const tempImage = new Image();
+            tempImage.src = currentImageSrc;
+
+            tempImage.onload = function() {
+                imgHoldElement.style.backgroundImage = `url('${currentImageSrc}')`;
+            };
+
+            tempImage.onerror = function() {
+                imgHoldElement.style.backgroundImage = `url('img/nope.jpg')`;
+                console.error(`Failed to load image: ${currentImageSrc}`);
+            };
+
+            // Configure the download button
+            if (availableDownloads.includes(paramsValue)) {
+                const downloadFileName = `${paramsValue}.pdf`;
+                downloadButton.classList.remove('disabled');
+                downloadButton.href = `pdf/${downloadFileName}`;
+                downloadButton.setAttribute('download', downloadFileName);
+                downloadButton.querySelector('img').src = 'img/indir.svg';
+            } else {
+                downloadButton.classList.add('disabled');
+                downloadButton.href = "#";
+                downloadButton.removeAttribute('download');
+                downloadButton.querySelector('img').src = 'img/indirno.svg';
+            }
+
+            // --- Next/Previous Button Logic ---
+            const currentIndex = sortedGameKeys.indexOf(paramsValue);
+
+            // Previous Button
+            if (currentIndex > 0) {
+                const prevGameKey = sortedGameKeys[currentIndex - 1];
+                prevGameButton.classList.remove('disabled');
+                prevGameButton.href = `index.html?oyun=${prevGameKey}`;
+            } else {
+                prevGameButton.classList.add('disabled');
+                prevGameButton.href = "#";
+            }
+
+            // Next Button
+            if (currentIndex < sortedGameKeys.length - 1) {
+                const nextGameKey = sortedGameKeys[currentIndex + 1];
+                nextGameButton.classList.remove('disabled');
+                nextGameButton.href = `index.html?oyun=${nextGameKey}`;
+            } else {
+                nextGameButton.classList.add('disabled');
+                nextGameButton.href = "#";
+            }
+
+        } else {
+            // If no valid 'oyun' parameter is found, show an error message.
+            gameTitleElement.textContent = "Oyun Bulunamadı";
+            // Ensure no special font classes are applied on error
+            gameTitleElement.classList.remove('medium-font', 'small-font'); 
+            imgHoldElement.style.backgroundImage = `url('https://placehold.co/800x600/ff0000/ffffff?text=HATA')`;
+            downloadButton.classList.add('disabled');
+            nextGameButton.classList.add('disabled');
+            prevGameButton.classList.add('disabled');
+        }
+    </script>
+</body>
+</html>
