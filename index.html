@@ -5,233 +5,448 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eğitsel Oyunlar</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Scheherazade+New:wght@400;500;600;700&family=Winky+Rough&display=swap" rel="stylesheet">
     <style>
-        /* Common styles for both pages */
+        /* OZEL YAZI TIPI KULLAN */
+        @font-face {
+            font-family: 'National Park';
+            src: url('fonts/bold.woff') format('woff');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'National Park';
+            src: url('fonts/thin.woff') format('woff');
+            font-weight: 200;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* ICMARPARK CSS TEMEL KURULUM */
         html, body {
             height: 100%;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            background-image: url('img/bg.png');
+            background-attachment: fixed;
         }
 
         body {
-            background-color: white;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23efefef' fill-opacity='0.3' fill-rule='evenodd'/%3E%3C/svg%3E");
-            background-attachment: fixed;
-            font-family: 'Inter', sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 2px;
+            padding: 0;
             box-sizing: border-box;
             min-height: 100vh;
         }
 
         .white-rounded-box {
-            background-color: transparent;
+            background-color: rgb(255,255,255);
             padding: 2vh;
-            max-width: 100%;
-            text-align:center;
+            max-width: 550px;
+            text-align: center;
             display: flex;
             flex-direction: column;
-			height:100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            min-width: 550px;
         }
 
+        /* SAYFA BASLIKLARI */
         h1 {
             font-family: "National Park", sans-serif;
+            font-weight: 700;
             font-size: 24px;
             color: black;
             padding: 0;
             margin: 0;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-            margin-bottom:2vh;
-			margin-top:1vh;
-            min-height: 40px; /* Ensure consistent height for the title area */
-            display: flex; /* Use flexbox for vertical alignment */
-            align-items: center; /* Vertically center text */
-            justify-content: center; /* Horizontally center text */
-            box-sizing: border-box; /* Include padding in height calculation */
-            overflow: hidden; /* Hide overflow if text is still too long */
-            white-space: nowrap; /* Keep text on a single line */
-            text-overflow: ellipsis; /* Add ellipsis if text overflows */
+            margin-bottom: 2vh;
+            margin-top: 1vh;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
+        h1.medium-font { font-size: 18px; }
+        h1.small-font { font-size: 14px; }
 
-        /* Styles for different font sizes based on title length */
-        h1.medium-font {
-            font-size: 18px; /* For titles between 26 and 40 characters */
-        }
-
-        h1.small-font {
-            font-size: 14px; /* For titles longer than 40 characters */
-        }
-
-        /* Image Placeholder */
+        /* RESIM KONTEYNERI */
         .imgHold {
-            background-color: rgb(230,230,230);
+            background-color: white;
             border-radius: 16px;
-            /* Remove fixed height/min-height */
-            /* min-height: 40%; */
-            /* height: 40%; */
-            
-            /* Add aspect ratio trick */
-            width: 100%; /* Ensure it takes full width of its container */
-            padding-top: 75%; /* 4:3 Aspect Ratio (3 / 4 * 100%) */
-            position: relative; /* Needed for absolute positioning of potential child elements */
-
+            width: 100%;
+            padding-top: 75%; /* 4:3 Aspect Ratio */
+            position: relative;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             border: solid 1px rgb(240,240,240);
-			background-image:url("img/00.jpg");
+            background-image: url("img/00.jpg");
         }
-
-        .ustt {
-            color:rgba(0,0,0,.4); text-align:center; font-size:12px;
-        }
-		
-		.cizgi1 {
-		width:100%;background-color:rgb(250,250,250);min-height:1px;margin:0;margin-top:1vh;
-		}
-		.cizgi2 {
-		width:100%;background-color:rgb(240,240,240);min-height:1px;margin:0;margin-bottom:1vh;
-		}
-
-        .ustt:hover {text-decoration:underline;color:gray;}
         
-        .myButton, .myButtonM, .myButtonZ, .myButtonP {
-            border-radius:2vh;
-            border:1px solid;
-            display:inline-flex;
-            cursor:pointer;
-            font-family:Arial;
-            font-size:15px;
-            font-weight:bold;
-            padding:6px 24px;
-            text-decoration:none;
+        /* ARAMA */
+        #searchContainer {
+            width: calc(100% - 4vh);
+            display: flex;
+            gap: 1vh;
+            align-items: center;
+            margin: 2vh;
+        }
+
+        #searchContainer input {
+            flex-grow: 1;
+            padding: 1vh 2vh;
+            border: 1px solid #ccc;
+            border-radius: 16px;
+            font-size: 20px;
+            font-family: "National Park", sans-serif;
+            font-weight: 200;
+        }
+
+        #searchContainer button {
+            padding: 1vh 9vh;
+            background: linear-gradient(to bottom, #f0c911 5%, #f2ab1e 100%);
+            color: #c92200;
+            border: 1px solid #e65f44;
+            border-radius: 16px;
+            cursor: pointer;
+            font-size: 20px;
+            font-family: "National Park", sans-serif;
+            font-weight: 700;
+            transition: background 0.2s ease;
+            box-shadow: inset 0px 1px 0px 0px #f9eca0;
+            text-shadow: 0px 1px 0px #ded17c;
+        }
+        #searchContainer button:hover { background: linear-gradient(to bottom, #f2ab1e 5%, #f0c911 100%); }
+        #searchContainer button:active { background: linear-gradient(to bottom, #f2ab1e 5%, #f0c911 100%); }
+
+        /* HAKKINDA KUTUSU */
+        .inf-box {
+            border-radius: 16px;
+            display: inline-flex;
+            font-family: "National Park", sans-serif;
+            font-weight: 200;
+            padding: 0;
+            text-decoration: none;
             justify-content: center;
             align-items: center;
-            margin-bottom:1vh;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: white;
+            color: black;
+            text-shadow: 0px 1px 0px rgb(240,240,240);
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            max-width: 550px;
+            margin-bottom: 1vh;
+            text-align: justify;
+        }
+        .thin-text {
+            font-family: "National Park", sans-serif;
+            font-weight: 200;
+            padding: 2vh;
+            padding-bottom: 1vh;
+			padding-top:0;
+        }
+        .bold-text {
+            font-family: "National Park", sans-serif;
+            font-weight: 700;
+            padding: 2vh;
+            padding-bottom: 0;
+			margin-bottom:0;
+        }
+        #info-book { display: none; }
+
+        /* ELEMAN GORUNUM */
+        #gameList { list-style: none; padding: 0; width: 100%; margin: 0; }
+        #gameList li { margin-bottom: 1vh; /* opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease-out, transform 0.5s ease-out; */ } /* Removed animation styles */
+        #gameList li.visible { opacity: 1; transform: translateY(0); }
+        #gameList li a {
+            border-radius: 16px; border: 1px solid rgb(20,20,60); display: inline-flex; cursor: pointer;
+            font-family: "National Park", sans-serif; font-size: 20px; font-weight: 700; padding: 12px 24px;
+            text-decoration: none; justify-content: center; align-items: center; width: 100%;
+            box-sizing: border-box; box-shadow: inset 0px 1px 0px 0px rgb(220,230,255);
+            background: linear-gradient(to bottom, rgb(10,100,140) 5%, rgb(10,100,140) 100%);
+            color: #ffffff; text-shadow: 0px 1px 0px rgb(0,0,60);
+            transition: background 0.2s ease, transform 0.1s ease;
+        }
+        #gameList li a:hover { background: linear-gradient(to bottom, rgb(50,140,180) 5%, rgb(30,120,160) 100%); }
+        #gameList li a:active { background: linear-gradient(to bottom, rgb(5,80,110) 5%, rgb(10,100,140) 100%); }
+        h2 { font-family: "National Park", sans-serif; font-weight: 700; margin-top: 3vh; }
+
+        /* TUS CEKMECESI */
+        #classButtonsContainer { display: flex; justify-content: space-around; gap: 1vh; margin-top: 1.6vh; margin-bottom: 1.6vh; width: 100%; max-width: 550px; }
+        .class-button {
+            flex-grow: 1; font-size: 18px; padding: 10px 20px; border-radius: 16px; border: 1px solid;
+            cursor: pointer; font-family: "National Park", sans-serif; font-weight: 700; text-decoration: none;
+            justify-content: center; align-items: center; box-sizing: border-box; color: #ffffff;
+            transition: background 0.2s ease, transform 0.1s ease;
+        }
+        .dark-orange { background: linear-gradient(to bottom, rgb(200, 80, 0) 5%, rgb(200, 80, 0) 100%); border-color: rgb(150, 60, 0); box-shadow: inset 0px 1px 0px 0px rgb(255, 160, 80); text-shadow: 0px 1px 0px rgb(100, 40, 0); }
+        .dark-orange:hover { background: linear-gradient(to bottom, rgb(220, 90, 0) 5%, rgb(200, 80, 0) 100%); }
+        .dark-red { background: linear-gradient(to bottom, rgb(180, 0, 0) 5%, rgb(180, 0, 0) 100%); border-color: rgb(130, 0, 0); box-shadow: inset 0px 1px 0px 0px rgb(255, 80, 80); text-shadow: 0px 1px 0px rgb(90, 0, 0); }
+        .dark-red:hover { background: linear-gradient(to bottom, rgb(200, 10, 10) 5%, rgb(180, 0, 0) 100%); }
+        .dark-purple { background: linear-gradient(to bottom, rgb(100, 0, 100) 5%, rgb(100, 0, 100) 100%); border-color: rgb(70, 0, 70); box-shadow: inset 0px 1px 0px 0px rgb(180, 80, 180); text-shadow: 0px 1px 0px rgb(50, 0, 50); }
+        .dark-purple:hover { background: linear-gradient(to bottom, rgb(120, 10, 120) 5%, rgb(100, 0, 100) 100%); }
+
+        /* COPYRIGHT TO AHMED ICMARPARK */
+        .ustt { color: rgba(0,0,0,.4); text-align: center; font-size: 12px; padding: 24px; font-family: "National Park", sans-serif; font-weight: 200; 
+		
+    color: #555555; /* Fallback color */
+    background-image: -webkit-linear-gradient(top, #ffffff, #aaaaaa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2); /* Single subtle shadow */
+		}
+        .ustt:hover { color: gray; }
+
+        /* SAYFA BASI TUSU */
+        #scrollToTopButton {
+            position: fixed; bottom: 20px; right: 20px; z-index: 99; display: none; width: 50px; height: 50px;
+            border-radius: 16px; border: 1px solid #c92200; background: linear-gradient(to bottom, #f0c911 5%, #f2ab1e 100%);
+            cursor: pointer; box-shadow: inset 0px 1px 0px 0px #f9eca0; transition: background 0.2s ease, transform 0.1s ease;
+            display: flex; justify-content: center; align-items: center;
+        }
+        #scrollToTopButton:hover { background: linear-gradient(to bottom, #f2ab1e 5%, #f0c911 100%); }
+        #scrollToTopButton svg { fill: #c92200; width: 24px; height: 24px; }
+
+        /* ALT SAYFA TUS TAKIMI */
+        .myButton, .myButtonM, .myButtonZ, .myButtonP {
+            border-radius: 16px; border: 1px solid; display: inline-flex; cursor: pointer;
+            font-family: "National Park", sans-serif; font-size: 20px; font-weight: 700;
+            padding: 0px 6px; text-decoration: none; justify-content: center; align-items: center;
+            margin-bottom: 1vh; width: 100%; box-sizing: border-box;
+        }
+        .myButton { box-shadow:inset 0px 1px 0px 0px rgb(200,255,200); background-color:rgb(40,160,40); border-color:rgb(0,100,0); color:#306108; text-shadow:0px 1px 0px #aade7c; }
+        .myButton:active { background:linear-gradient(to bottom, rgb(60,180,60) 5%, rgb(80,200,80) 100%); }
+        .myButtonM { box-shadow:inset 0px 1px 0px 0px rgb(255,180,220); background-color:rgb(120,40,80); border-color:rgb(60,20,20); color:#ffffff; text-shadow:0px 1px 0px #1570cd; }
+        .myButtonM:active { background:linear-gradient(to bottom, rgb(140,60,100) 5%, rgb(160,80,120) 100%); }
+        .myButtonZ { box-shadow:inset 0px 1px 0px 0px rgb(220,180,255); background-color:rgb(80,50,120); border-color:rgb(40,20,40); color:#ffffff; text-shadow:0px 1px 0px #1570cd; }
+        .myButtonZ:active { background:linear-gradient(to bottom, rgb(100,70,140) 5%, rgb(120,90,160) 100%); }
+        .myButtonP { box-shadow:inset 0px 1px 0px 0px rgb(200,200,255); background-color:rgb(10,100,140); border-color:rgb(20,20,60); color:#ffffff; text-shadow:0px 1px 0px #9b14b3; }
+        .myButtonP:active { background:linear-gradient(to bottom, rgb(30,120,160) 5%, rgb(50,140,180) 100%); }
+        .myButton img, .myButtonM img, .myButtonZ img, .myButtonP img { width: 100%; height: auto; }
+
+        /* SONUK TUSLAR */
+        .myButton.disabled, .myButtonM.disabled, .myButtonZ.disabled, .myButtonP.disabled {
+            background: #6c757d !important; cursor: not-allowed !important; pointer-events: none !important;
+            box-shadow: none !important; border-color: #495057 !important; color: #dee2e6 !important; text-shadow: none !important;
+        }
+        .myButton.disabled img, .myButtonM.disabled img, .myButtonZ.disabled img, .myButtonP.disabled img {
+            filter: grayscale(100%) brightness(120%); opacity: 0.7;
+        }
+
+        /* MOBIL CIHAZ */
+        @media (max-width: 767px) {
+            .white-rounded-box { min-width: 90%; }
+            h1 { font-size: 2.5vh; }
+            h1.medium-font { font-size: 2.2vh; }
+            h1.small-font { font-size: 2vh; }
+            #searchContainer input, #searchContainer button { font-size: 16px; padding: 10px; border-radius: 10px; }
+            #scrollToTopButton { width: 40px; height: 40px; bottom: 15px; right: 15px; }
+            #scrollToTopButton svg { width: 20px; height: 20px; }
+        }
+		/* A H M E D K A P R A M C I */
+
+        /* Yeni eklenen stiller */
+        .game-details-section {
+            text-align: left;
+            margin-top: 2vh;
+            padding: 2vh;
+            background-color: #f9f9f9;
+            border-radius: 16px;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
             width: 100%;
             box-sizing: border-box;
         }
 
-        .myButton {
-            box-shadow:inset 0px 1px 0px 0px rgb(200,255,200);
-            background-color:rgb(40,160,40);
-            border-color:rgb(0,100,0);
-            color:#306108;
-            text-shadow:0px 1px 0px #aade7c;
-        }
-        .myButton:active {
-            background:linear-gradient(to bottom, rgb(60,180,60) 5%, rgb(80,200,80) 100%);
-        }
-
-        .myButtonM {
-            box-shadow:inset 0px 1px 0px 0px rgb(255,180,220);
-            background-color:rgb(120,40,80);
-            border-color:rgb(60,20,20);
-            color:#ffffff;
-            text-shadow:0px 1px 0px #1570cd;
-        }
-        .myButtonM:active {
-            background:linear-gradient(to bottom, rgb(140,60,100) 5%, rgb(160,80,120) 100%);
-        }
-		
-        .myButtonZ {
-            box-shadow:inset 0px 1px 0px 0px rgb(220,180,255);
-            background-color:rgb(80,50,120);
-            border-color:rgb(40,20,40);
-            color:#ffffff;
-            text-shadow:0px 1px 0px #1570cd;
-        }
-        .myButtonZ:active {
-            background:linear-gradient(to bottom, rgb(100,70,140) 5%, rgb(120,90,160) 100%);
+        .game-details-section h3 {
+            font-family: "National Park", sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 1vh;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5vh;
         }
 
-        .myButtonP {
-            box-shadow:inset 0px 1px 0px 0px rgb(200,200,255);
-            background-color:rgb(10,100,140);
-            border-color:rgb(20,20,60);
-            color:#ffffff;
-            text-shadow:0px 1px 0px #9b14b3;
-        }
-        .myButtonP:active {
-            background:linear-gradient(to bottom, rgb(30,120,160) 5%, rgb(50,140,180) 100%);
+        .game-details-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
 
-		.myButtonZ.disabled,
-        .myButton.disabled,
-        .myButtonM.disabled,
-        .myButtonP.disabled {
-            background: #6c757d !important;
-            cursor: not-allowed !important;
-            pointer-events: none !important;
-            box-shadow: none !important;
-            border-color: #495057 !important;
-            color: #dee2e6 !important;
-            text-shadow: none !important;
-        }
-
-		.myButtonZ.disabled img,
-        .myButton.disabled img,
-        .myButtonM.disabled img,
-        .myButtonP.disabled img {
-            filter: grayscale(100%) brightness(120%);
-            opacity: 0.7;
-        }
-
-        .myButton img, .myButtonM img, .myButtonZ img,.myButtonP img {
-            width: 100%;
-            height: auto;
-        }
-        
-        @media (max-width: 767px) {
-            .white-rounded-box {
-            }
-            h1 {
-                font-size: 3vh;
-            }
-            h1.medium-font {
-                font-size: 2.5vh; /* Adjust for mobile if needed */
-            }
-            h1.small-font {
-                font-size: 2vh; /* Adjust for mobile if needed */
-            }
+        .game-details-section ul li {
+            font-family: "National Park", sans-serif;
+            font-weight: 200;
+            font-size: 16px;
+            margin-bottom: 0.5vh;
+            line-height: 1.4;
+            color: #555;
         }
     </style>
 </head>
 <body>
 
     <div id="gameDetailContainer" class="white-rounded-box">
-        <h1 id="gameTitle">JavaScript'i Etkinleştirin</h1>
-		<div class="cizgi1"></div><div class="cizgi2"></div>
+        <h1 id="gameTitle">İngilizce Öğretiminde Eğitsel Oyunlar</h1>
+
         <div class="imgHold"></div>
-		<div class="cizgi1"></div><div class="cizgi2"></div>
+        
+        <!-- ALT SAYFA TUS CEKMECESI -->
+        <div id="detailButtons" style="display: none; width: 100%; margin-top: 2vh;">
+            <a class="myButton" id="downloadButton" href="#" title="İndir" download>
+                <p>İçeriği İndir 📥</p>
+            </a>
+            <a class="myButtonP" id="allGamesButton" href="index.html" title="Tüm Oyunlar">
+                <p>Tüm Oyunlar 🧩</p>
+            </a>
+            <a class="myButtonZ" id="nextGame" href="#" title="Sonraki Oyuna Git">
+                <p>Sıradaki Oyun 👉</p>
+            </a>
+            <a class="myButtonM" id="prevGame" href="#" title="Önceki Oyun �">
+                <p>Önceki Oyun 👈</p>
+            </a>
+        </div>
 
-<a class="myButton" id="downloadButton" href="pdf/01.pdf" title="İndir" download="01.pdf">
-            <img src="img/indir.svg" alt="İçeriği İndir">
-        </a>
+        <!-- ANASAYFA TUS CEKMECESI -->
+        <div id="listViewContainer">
+            <div id="classButtonsContainer">
+                <a href="#sinif2-oyunlar" class="class-button dark-orange">2. Sınıf</a>
+                <a href="#sinif3-oyunlar" class="class-button dark-red">3. Sınıf</a>
+                <a href="#sinif4-oyunlar" class="class-button dark-purple">4. Sınıf</a>
+            </div>
 
-        <a class="myButtonP" href="liste.html" title="Tüm Oyunlar">
-            <img src="img/allgames.svg" alt="Tüm Oyunlar"/>
-        </a>
-        <a class="myButtonZ" id="nextGame" href="#" title="Sonraki Oyuna Git">
-            <img src="img/next.svg" alt="Sonraki Oyuna Git"/>
-        </a>
+            <a id="toggleBookInfoButton" style="margin-bottom:1vh; display: block;" class="myButtonM" href="#" title="Kitap Hakkında">
+                <p>Kitap Hakkında 📒 | Oyun Ara 🔍</p>
+            </a>
 
-        <a class="myButtonM" id="prevGame" href="#" title="Önceki Oyuna git">
-            <img src="img/prev.svg" alt="Önceki Oyuna Git"/>
-        </a>
-		<div class="cizgi1"></div><div class="cizgi2"></div>
-        <p class="ustt">İlkokullar için İngilizce Öğretiminde Eğitsel Oyunlar<br>@2025 Ahmed KAP.</p>
-		
-		<br><br><br><br><br><br><br><br><br><br>
+            <div id="info-book" class="inf-box" style="display: none;">
+                <div id="searchContainer">
+                    <input type="text" id="searchInput" placeholder="Oyun ismi">
+                    <button id="searchButton">Ara</button>
+                </div>
+				<p class="bold-text">Kitap Hakkında</p>
+				<p class="thin-text">
+					İlkokullar için İngilizce Öğretiminde Eğitsel Oyunlar kitabı, 2, 3 ve 4. sınıf düzeylerine uygun, kolaydan zora sıralanmış oyun ve etkinlikler sunmaktadır. Her oyunun başlığının altında hedeflenen öğrenme çıktıları yer almakta olup, bu çıktılar öğrencilerin edineceği becerileri ve <a href="https://mufredat.meb.gov.tr/Programlar.aspx">Milli Eğitim Bakanlığı İngilizce Dersi Öğretim Programı (2018)</a> doğrultusunda kazanmaları beklenen arkadaşlık, dürüstlük, sabır gibi değerleri içermektedir. Kitapta her oyun için oyunun oynanmasında yardımcı materyallere erişim sağlayan kare kodlar bulunmaktadır. Kitaptaki herhangi bir oyunun kare kodunu okuttuğunuzda ilgili oyunun içerik sayfasına yönlendirileceksiniz.
+				</p>
+			</div>
+            
+            <ul id="gameList">
+                <h2 id="sinif2-oyunlar">2. Sınıflar için Oyunlar</h2>
+                <li class="game-item"><a href="?oyun=01">01. Göster ve Söyle</a></li>
+                <li class="game-item"><a href="?oyun=02">02. Tak Tak!</a></li>
+                <li class="game-item"><a href="?oyun=03">03. Top Sende</a></li>
+                <li class="game-item"><a href="?oyun=04">04. Sağol Dostum</a></li>
+                <li class="game-item"><a href="?oyun=05">05. Çevir Bakalım</a></li>
+                <li class="game-item"><a href="?oyun=06">06. Kulağını Dört Aç</a></li>
+                <li class="game-item"><a href="?oyun=07">07. Yolu Takip Et</a></li>
+                <li class="game-item"><a href="?oyun=08">08. Adımla</a></li>
+                <li class="game-item"><a href="?oyun=09">09. Baş Ressam</a></li>
+                <li class="game-item"><a href="?oyun=10">10. Sayı Dizisi</a></li>
+                <li class="game-item"><a href="?oyun=11">11. Buldum!</a></li>
+                <li class="game-item"><a href="?oyun=12">12. Bu Rengi Sever Misin?</a></li>
+                <li class="game-item"><a href="?oyun=13">13. Bukalemun Topu</a></li>
+                <li class="game-item"><a href="?oyun=14">14. Renkli Seksek</a></li>
+                <li class="game-item"><a href="?oyun=15">15. Hangi Renksin?</a></li>
+                <li class="game-item"><a href="?oyun=16">16. Renkli Rakamlarla Tombala</a></li>
+                <li class="game-item"><a href="?oyun=17">17. Çevirme Var</a></li>
+                <li class="game-item"><a href="?oyun=18">18. Trafik</a></li>
+                <li class="game-item"><a href="?oyun=19">19. Kendine Dokun</a></li>
+                <li class="game-item"><a href="?oyun=20">20. Labirent</a></li>
+                <li class="game-item"><a href="?oyun=21">21. Vücudumuzun Ritmi</a></li>
+                <li class="game-item"><a href="?oyun=22">22. Arkadaşını Bul</a></li>
+                <li class="game-item"><a href="?oyun=23">23. Evcil Hayvanımı Gören Oldu mu?</a></li>
+                <li class="game-item"><a href="?oyun=24">24. Sever misin?</a></li>
+                <li class="game-item"><a href="?oyun=25">25. Meyvelerle Tombala</a></li>
+                <li class="game-item"><a href="?oyun=26">26. Kutudan Bir Hareket Kap</a></li>
+                <li class="game-item"><a href="?oyun=27">27. Harika Kutu</a></li>
+                <li class="game-item"><a href="?oyun=28">28. Hayvanı Bil</a></li>
+                <li class="game-item"><a href="?oyun=29">29. Seviyor Sevmiyor</a></li>
+                <li class="game-item"><a href="?oyun=30">30. Odadaki Fil</a></li>
+                <li class="game-item"><a href="?oyun=31">31. Becerikli Hayvanlar</a></li>
+
+                <h2 id="sinif3-oyunlar">3. Sınıflar için Oyunlar</h2>
+                <li class="game-item"><a href="?oyun=32">32. Hangi Sayıyım?</a></li>
+                <li class="game-item"><a href="?oyun=33">33. Kare Kapmaca</a></li>
+                <li class="game-item"><a href="?oyun=34">34. Tanışalım</a></li>
+                <li class="game-item"><a href="?oyun=35">35. Aile Dedektifi</a></li>
+                <li class="game-item"><a href="?oyun=36">36. Bu Kimdir?</a></li>
+                <li class="game-item"><a href="?oyun=37">37. Top Atarak Tanış</a></li>
+                <li class="game-item"><a href="?oyun=38">38. Yeteneğimi Bil</a></li>
+                <li class="game-item"><a href="?oyun=39">39. On iki Duygulu Seksek</a></li>
+                <li class="game-item"><a href="?oyun=40">40. Ben Hangi Duyguyum?</a></li>
+                <li class="game-item"><a href="?oyun=41">41. Tek mi Görüyorsun, Çift mi?</a></li>
+                <li class="game-item"><a href="?oyun=42">42. Kartlarla Renkleri Keşfet</a></li>
+                <li class="game-item"><a href="?oyun=43">43. Renkleri Karton Kutulara Gönder!</a></li>
+                <li class="game-item"><a href="?oyun=44">44. Sende Var mı?</a></li>
+                <li class="game-item"><a href="?oyun=45">45. Şekil Çemberi</a></li>
+                <li class="game-item"><a href="?oyun=46">46. Şekiller ve Boyutları</a></li>
+                <li class="game-item"><a href="?oyun=47">47. Ben Neyim?</a></li>
+                <li class="game-item"><a href="?oyun=48">48. Kavanozdaki Evim</a></li>
+                <li class="game-item"><a href="?oyun=49">49. Pişman Afet</a></li>
+                <li class="game-item"><a href="?oyun=50">50. Neredesin?</a></li>
+                <li class="game-item"><a href="?oyun=51">51. Yön Bulma</a></li>
+                <li class="game-item"><a href="?oyun=52">52. Ulaşım Biletleri</a></li>
+                <li class="game-item"><a href="?oyun=53">53. Hava Durumu</a></li>
+                <li class="game-item"><a href="?oyun=54">54. Hayvanlı Basketbol</a></li>
+                <li class="game-item"><a href="?oyun=55">55. Düğümleri Çöz</a></li>
+
+                <h2 id="sinif4-oyunlar">4. Sınıflar için Oyunlar</h2>
+                <li class="game-item"><a href="?oyun=56">56. İzninizle Efendim</a></li>
+                <li class="game-item"><a href="?oyun=57">57. Bayraktar</a></li>
+                <li class="game-item"><a href="?oyun=58">58. Çarkı Döndür, Hareketi Söyle</a></li>
+                <li class="game-item"><a href="?oyun=59">59. Küme Karşılaşması</a></li>
+                <li class="game-item"><a href="?oyun=60">60. Ülke ve Milliyet</a></li>
+                <li class="game-item"><a href="?oyun=61">61. Bil ve Fethet Oyunu</a></li>
+                <li class="game-item"><a href="?oyun=62">62. Tanışma</a></li>
+                <li class="game-item"><a href="?oyun=63">63. Harita Dedektifleri</a></li>
+                <li class="game-item"><a href="?oyun=64">64. Bayraklı Kapatma</a></li>
+                <li class="game-item"><a href="?oyun=65">65. İtirazım Var!</a></li>
+                <li class="game-item"><a href="?oyun=66">66. Sen Söyle!</a></li>
+                <li class="game-item"><a href="?oyun=67">67. Ben de, Ben de!</a></li>
+                <li class="game-item"><a href="?oyun=68">68. Bebek Uyuyor</a></li>
+                <li class="game-item"><a href="?oyun=69">69. Kelebek Olmak İstiyorum</a></li>
+                <li class="game-item"><a href="?oyun=70">70. Kim Yapar?</a></li>
+                <li class="game-item"><a href="?oyun=71">71. Saat Kartları</a></li>
+                <li class="game-item"><a href="?oyun=72">72. Günleri Bul</a></li>
+                <li class="game-item"><a href="?oyun=73">73. Kağıttan Kedi</a></li>
+                <li class="game-item"><a href="?oyun=74">74. Bilge Saymın</a></li>
+                <li class="game-item"><a href="?oyun=75">75. Nereye Koydun?</a></li>
+                <li class="game-item"><a href="?oyun=76">76. Torbadan Meslek</a></li>
+                <li class="game-item"><a href="?oyun=77">77. Galiba İş Yerimi Kaybettim!</a></li>
+                <li class="game-item"><a href="?oyun=78">78. Çalışma Yeri Bulmacası</a></li>
+                <li class="game-item"><a href="?oyun=79">79. Havalar Nasıl?</a></li>
+                <li class="game-item"><a href="?oyun=80">80. Üzgünüm ki Hayır</a></li>
+                <li class="game-item"><a href="?oyun=81">81. Alabilir miyim?</a></li>
+                <li class="game-item"><a href="?oyun=82">82. Mevsimler ve Kıyafetler</a></li>
+                <li class="game-item"><a href="?oyun=83">83. Kişiler ve Kimlikleri</a></li>
+                <li class="game-item"><a href="?oyun=84">84. Seçtiğim Kişiyi Tahmin Et</a></li>
+                <li class="game-item"><a href="?oyun=85">85. Roket Yapmaca</a></li>
+                <li class="game-item"><a href="?oyun=86">86. Aç mısın, Susuz mu?</a></li>
+            </ul>
+            <p class="ustt">İlkokullar için İngilizce Öğretiminde Eğitsel Oyunlar<br>İnternet Sitesi @2025 Ahmed KAP.<br><a href="ilet/ilet.html">Bize yazın</a><br><br>Arkaplan görseli: background-tiles.com</p>
+        </div>
+        <!-- New section for game details -->
+        <div id="gameContentArea" class="game-details-section" style="display: none;">
+            <!-- Content will be loaded here by JavaScript -->
+        </div>
     </div>
 
+    <button id="scrollToTopButton" title="Sayfa Başına Git">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 2L4 10h5v10h6V10h5L12 2z"/>
+        </svg>
+    </button>
+
     <script>
-        // Data for all the games
+        // OYUN DATA (Existing hardcoded titles - will be merged with fetched data)
         const gameTitles = {
             "01": "Göster ve Söyle", "02": "Tak Tak!", "03": "Top Sende", "04": "Sağol Dostum",
             "05": "Çevir Bakalım", "06": "Kulağını Dört Aç", "07": "Yolu Takip Et", "08": "Adımla",
@@ -260,7 +475,6 @@
             "85": "Roket Yapmaca", "86": "Aç mısın, Susuz mu?"
         };
 
-        // List of games that have a downloadable PDF file
         const availableDownloads = [
             "01", "05", "08", "09", "10", "11", "16", "18", "19", "20",
             "23", "24", "25", "26", "29", "30", "31", "32", "33", "36", "39", "40",
@@ -269,97 +483,203 @@
             "81", "82", "83", "84", "85", "86"
         ];
 
-        // Get references to the HTML elements
-        const gameTitleElement = document.getElementById('gameTitle');
-        const imgHoldElement = document.querySelector('.imgHold'); // Get the imgHold div
-        const downloadButton = document.getElementById('downloadButton');
-        const nextGameButton = document.getElementById('nextGame');
-        const prevGameButton = document.getElementById('prevGame');
+        // Global variable to store fetched game data
+        let allGameDetails = [];
 
-        // Get the 'oyun' parameter from the URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const paramsValue = urlParams.get('oyun');
+        document.addEventListener('DOMContentLoaded', async () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const paramsValue = urlParams.get('oyun');
 
-        // Get all game keys and sort them numerically for navigation
-        const sortedGameKeys = Object.keys(gameTitles).sort((a, b) => parseInt(a) - parseInt(b));
+            // REFERANS VER
+            const gameTitleElement = document.getElementById('gameTitle');
+            const imgHoldElement = document.querySelector('.imgHold');
+            const scrollToTopButton = document.getElementById('scrollToTopButton');
+            const listViewContainer = document.getElementById('listViewContainer');
+            const detailButtonsContainer = document.getElementById('detailButtons');
+            const gameContentArea = document.getElementById('gameContentArea'); // New content area
 
-        if (paramsValue && gameTitles[paramsValue]) {
-            // A valid game key is in the URL
-            const currentTitle = gameTitles[paramsValue];
-            const currentImageSrc = `res/${paramsValue}.jpg`;
-
-            // Update the page title and game title
-            document.title = currentTitle; // Set the browser tab title
-            gameTitleElement.textContent = currentTitle;
-
-            // Adjust font size based on title length to keep height consistent
-            gameTitleElement.classList.remove('medium-font', 'small-font'); // Remove existing classes first
-            if (currentTitle.length > 40) {
-                gameTitleElement.classList.add('small-font');
-            } else if (currentTitle.length > 25) {
-                gameTitleElement.classList.add('medium-font');
+            // Fetch game details from JSON file
+            try {
+                const response = await fetch('first-ten-games.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                allGameDetails = await response.json();
+                console.log('Game details loaded:', allGameDetails);
+            } catch (error) {
+                console.error('Error fetching game details:', error);
+                // Fallback or error message to user
+                gameContentArea.innerHTML = '<p style="color: red;">Oyun detayları yüklenirken bir hata oluştu. Lütfen daha sonra tekrar deneyin.</p>';
             }
 
-            // Load image and set as background for imgHold
-            const tempImage = new Image();
-            tempImage.src = currentImageSrc;
+            if (paramsValue) {
+                const gameNumber = parseInt(paramsValue, 10);
+                // Check if gameNumber is within the range of available games (1-86)
+                // and if details for this game are available in the fetched JSON
+                const selectedGameDetail = allGameDetails.find(game => game.id === paramsValue);
 
-            tempImage.onload = function() {
-                imgHoldElement.style.backgroundImage = `url('${currentImageSrc}')`;
-            };
+                if (gameNumber >= 1 && gameNumber <= 86 && gameTitles[paramsValue]) {
+                    listViewContainer.style.display = 'none';
+                    detailButtonsContainer.style.display = 'block';
+                    gameContentArea.style.display = 'block'; // Show the new content area
 
-            tempImage.onerror = function() {
-                imgHoldElement.style.backgroundImage = `url('img/nope.jpg')`;
-                console.error(`Failed to load image: ${currentImageSrc}`);
-            };
+                    // HTML ELEMANLARINI GUNCELLE
+                    const currentTitle = gameTitles[paramsValue];
+                    document.title = currentTitle;
+                    gameTitleElement.textContent = currentTitle;
 
-            // Configure the download button
-            if (availableDownloads.includes(paramsValue)) {
-                const downloadFileName = `${paramsValue}.pdf`;
-                downloadButton.classList.remove('disabled');
-                downloadButton.href = `pdf/${downloadFileName}`;
-                downloadButton.setAttribute('download', downloadFileName);
-                downloadButton.querySelector('img').src = 'img/indir.svg';
+                    // YAZI BOYUT AYARI
+                    gameTitleElement.classList.remove('medium-font', 'small-font');
+                    if (currentTitle.length > 40) gameTitleElement.classList.add('small-font');
+                    else if (currentTitle.length > 25) gameTitleElement.classList.add('medium-font');
+
+                    // RESIM AYARI
+                    imgHoldElement.style.backgroundImage = `url('res/${paramsValue}.jpg')`;
+                    imgHoldElement.onerror = () => { imgHoldElement.style.backgroundImage = `url('img/nope.jpg')`; };
+
+                    // Display game details from JSON
+                    gameContentArea.innerHTML = ''; // Clear previous content
+
+                    if (selectedGameDetail) {
+                        // ÖĞRENME ÇIKTILARI
+                        if (selectedGameDetail.ogrenmeCiktilari && selectedGameDetail.ogrenmeCiktilari.length > 0) {
+                            const learningOutcomesDiv = document.createElement('div');
+                            learningOutcomesDiv.innerHTML = '<h3>ÖĞRENME ÇIKTILARI</h3>';
+                            const ul = document.createElement('ul');
+                            selectedGameDetail.ogrenmeCiktilari.forEach(item => {
+                                const li = document.createElement('li');
+                                li.textContent = item;
+                                ul.appendChild(li);
+                            });
+                            learningOutcomesDiv.appendChild(ul);
+                            gameContentArea.appendChild(learningOutcomesDiv);
+                        }
+
+                        // HAZIRLIK
+                        if (selectedGameDetail.hazirlik) {
+                            const hazirlikDiv = document.createElement('div');
+                            hazirlikDiv.innerHTML = '<h3>HAZIRLIK</h3>';
+                            const p = document.createElement('p');
+                            p.textContent = selectedGameDetail.hazirlik;
+                            hazirlikDiv.appendChild(p);
+                            gameContentArea.appendChild(hazirlikDiv);
+                        }
+
+                        // OYNANIŞ
+                        if (selectedGameDetail.oynanis && selectedGameDetail.oynanis.length > 0) {
+                            const oynanisDiv = document.createElement('div');
+                            oynanisDiv.innerHTML = '<h3>OYNANIŞ</h3>';
+                            const ul = document.createElement('ul');
+                            selectedGameDetail.oynanis.forEach(item => {
+                                const li = document.createElement('li');
+                                li.textContent = item;
+                                ul.appendChild(li);
+                            });
+                            oynanisDiv.appendChild(ul);
+                            gameContentArea.appendChild(oynanisDiv);
+                        }
+                    } else {
+                        gameContentArea.innerHTML += '<p>Bu oyun için detaylı bilgi bulunmamaktadır.</p>';
+                    }
+
+                    // TUSLARI GUNCELLE
+                    const downloadButton = document.getElementById('downloadButton');
+                    const nextGameButton = document.getElementById('nextGame');
+                    const prevGameButton = document.getElementById('prevGame');
+
+                    // INDIR TUSU
+                    if (availableDownloads.includes(paramsValue)) {
+                        const downloadFileName = `${paramsValue}.pdf`;
+                        downloadButton.classList.remove('disabled');
+                        downloadButton.href = `pdf/${downloadFileName}`;
+                        downloadButton.setAttribute('download', downloadFileName);
+                        // downloadButton.querySelector('img').src = 'img/indir.svg'; // Keep text for now
+                    } else {
+                        downloadButton.classList.add('disabled');
+                        downloadButton.href = "#";
+                        downloadButton.removeAttribute('download');
+                        // downloadButton.querySelector('img').src = 'img/indirno.svg'; // Keep text for now
+                    }
+
+                    // ILERI VE GERI TUSLARI
+                    const sortedGameKeys = Object.keys(gameTitles).sort((a, b) => parseInt(a) - parseInt(b));
+                    const currentIndex = sortedGameKeys.indexOf(paramsValue);
+
+                    if (currentIndex > 0) {
+                        prevGameButton.classList.remove('disabled');
+                        prevGameButton.href = `?oyun=${sortedGameKeys[currentIndex - 1]}`;
+                    } else {
+                        prevGameButton.classList.add('disabled');
+                        prevGameButton.href = "#";
+                    }
+
+                    if (currentIndex < sortedGameKeys.length - 1) {
+                        nextGameButton.classList.remove('disabled');
+                        nextGameButton.href = `?oyun=${sortedGameKeys[currentIndex + 1]}`;
+                    } else {
+                        nextGameButton.classList.add('disabled');
+                        nextGameButton.href = "#";
+                    }
+
+                } else {
+                    // BOYLE BI OYUN YOK
+                    document.body.innerHTML = `<div style="display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'National Park', sans-serif; font-size: 32px; color: #333;">You are lost take the boat back<a href="index.html"><img src="img/lost.png"/></a></div>`;
+                }
+
             } else {
-                downloadButton.classList.add('disabled');
-                downloadButton.href = "#";
-                downloadButton.removeAttribute('download');
-                downloadButton.querySelector('img').src = 'img/indirno.svg';
+                // Main list view
+                const gameList = document.getElementById('gameList');
+                const searchInput = document.getElementById('searchInput');
+                const searchButton = document.getElementById('searchButton');
+                const toggleBookInfoButton = document.getElementById('toggleBookInfoButton');
+                const infoBook = document.getElementById('info-book');
+                
+                const gameItems = document.querySelectorAll('#gameList .game-item');
+                const h2Elements = document.querySelectorAll('#gameList h2');
+
+                const displayGameList = (filter = '') => {
+                    h2Elements.forEach(h2 => h2.style.display = 'block'); // Reset all h2 to block initially
+                    gameItems.forEach(item => {
+                        const linkText = item.querySelector('a').textContent;
+                        item.style.display = linkText.toLowerCase().includes(filter.toLowerCase()) ? 'block' : 'none';
+                    });
+
+                    // ALT BASLIKTA ALAKALI OYUN YOKSA O H2YI GIZLE
+                    h2Elements.forEach(h2 => {
+                        let nextSibling = h2.nextElementSibling;
+                        let hasVisibleItems = false;
+                        while (nextSibling && nextSibling.tagName === 'LI') {
+                            if (nextSibling.style.display !== 'none') {
+                                hasVisibleItems = true;
+                                break;
+                            }
+                            nextSibling = nextSibling.nextElementSibling;
+                        }
+                        h2.style.display = hasVisibleItems ? 'block' : 'none';
+                    });
+                };
+
+                // LISTEYI GOR
+                displayGameList();
+
+                searchButton.addEventListener('click', () => displayGameList(searchInput.value.trim()));
+                searchInput.addEventListener('keyup', (event) => {
+                    if (event.key === 'Enter') displayGameList(searchInput.value.trim());
+                });
+                toggleBookInfoButton.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    infoBook.style.display = infoBook.style.display === 'none' ? 'block' : 'none';
+                });
             }
 
-            // --- Next/Previous Button Logic ---
-            const currentIndex = sortedGameKeys.indexOf(paramsValue);
-
-            // Previous Button
-            if (currentIndex > 0) {
-                const prevGameKey = sortedGameKeys[currentIndex - 1];
-                prevGameButton.classList.remove('disabled');
-                prevGameButton.href = `index.html?oyun=${prevGameKey}`;
-            } else {
-                prevGameButton.classList.add('disabled');
-                prevGameButton.href = "#";
-            }
-
-            // Next Button
-            if (currentIndex < sortedGameKeys.length - 1) {
-                const nextGameKey = sortedGameKeys[currentIndex + 1];
-                nextGameButton.classList.remove('disabled');
-                nextGameButton.href = `index.html?oyun=${nextGameKey}`;
-            } else {
-                nextGameButton.classList.add('disabled');
-                nextGameButton.href = "#";
-            }
-
-        } else {
-            // If no valid 'oyun' parameter is found, show an error message.
-            gameTitleElement.textContent = "Oyun Bulunamadı";
-            // Ensure no special font classes are applied on error
-            gameTitleElement.classList.remove('medium-font', 'small-font'); 
-            imgHoldElement.style.backgroundImage = `url('https://placehold.co/800x600/ff0000/ffffff?text=HATA')`;
-            downloadButton.classList.add('disabled');
-            nextGameButton.classList.add('disabled');
-            prevGameButton.classList.add('disabled');
-        }
+            // SAYFA BASI BOOKMARK
+            window.addEventListener('scroll', () => {
+                scrollToTopButton.style.display = (window.scrollY > 200) ? 'flex' : 'none';
+            });
+            scrollToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
     </script>
 </body>
 </html>
