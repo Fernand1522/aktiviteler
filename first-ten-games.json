@@ -1,0 +1,193 @@
+[
+  {
+    "id": "01",
+    "title": "Göster ve Söyle",
+    "ogrenmeCiktilari": [
+      "E2.1.L1. Öğrenciler, Türkçe ve İngilizce’de ortak olan kelimeleri tanıyabilecekler.",
+      "E2.1.S1. Öğrenciler, belirli nesneleri, insanları veya hayvanları tanımlamak için doğru kelimeyi kullanabilecekler."
+    ],
+    "hazirlik": "Qr kod ile indirilen dosyada, derste işlenecek nesnelerin resimleri bulunmakta ve her bir resmin altında İngilizce ve Türkçe yazılışları yer almaktadır.",
+    "oynanis": [
+      "➤ Öğretmen tahtaya “That is” kalıbını yazar.",
+      "➤ İndirdiği dosyayı projektörle tahtaya yansıtır.",
+      "➤ Öğretmen, oyunu öğrencilere tanıtır.",
+      "➤ Öğrenciler sırayla tahtaya gelir ve bir resmi işaret eder.",
+      "➤ Sonra “That is” kalıbını kullanarak resmin altındaki kelimeyi söyler."
+    ]
+  },
+  {
+    "id": "02",
+    "title": "Tak Tak!",
+    "ogrenmeCiktilari": [
+      "E2.2.L2. Öğrenciler, birisi kendini tanıttığında anlayabilecekler.",
+      "E2.2.S2. Öğrenciler, birinin adını öğrenmek için sorular sorabilecekler"
+    ],
+    "hazirlik": "Öğretmen, oyunun nasıl oynanacağını gönüllü bir öğrenciyle etkileşimli olarak gösterir.",
+    "oynanis": [
+      "➤ Öğretmen, gönüllü olmak isteyen bir öğrenciye söz hakkı verir.",
+      "➤ Gönüllü öğrenci, eliyle sırayı iki kere tıklatır veya zili alır ve iki kere çalar. “Knock knock!” veya “Tak tak!“ der.",
+      "➤ Diğer bütün öğrenciler, “Who is there?” diye sorar.",
+      "➤ Gönüllü öğrenci, “My name is” demesinin ardından ismini söyler. Mesela, “My name is Kitagawa.”",
+      "➤ Öğrenciler hep birlikte, “Kitagawa who?” diye sorarlar.",
+      "➤ Gönüllü öğrenci, “This is” dedikten sonra isim ve soyismini birlikte söyler.",
+      "➤ Bütün öğrenciler, en az bir kere yapana kadar oyun devam eder."
+    ]
+  },
+  {
+    "id": "03",
+    "title": "Top Sende",
+    "ogrenmeCiktilari": [
+      "E2.2.S4. Öğrenciler, basit bir şekilde kendilerini tanıtabilecekler.",
+      "E2.2.L1. Öğrenciler, birini selamlama ve tanışma hakkında basit ifadeleri anlayabilecekler."
+    ],
+    "hazirlik": "Öncelikle öğrencilerin rahatça hareket edebilmesi için sınıfta ortada bir boşluk olacak şekilde sıralar kenara çekilmelidir. Ardından konuyla ilgili cümleler soru-cevap şeklinde sınıftaki tahtaya yazılır. Tahtaya yazılan cümleler öğrencinin kendisine uyarlayabileceği cümlelerdir. “What is your name?” “My name is ...” “Where are you from?” “I am from ...” “How old are you?” “I am ... years old.” “Where do you live?” “I live in ...” “How are you?” “I am fine” “Nice to meet you!“ “Nice to meet you too!”",
+    "oynanis": [
+      "➤ Öncelikle oyunu öğretmen başlatır.",
+      "➤ Öğretmen istediği veya gönüllü olmak isteyen bir öğrenciye topu atar.",
+      "➤ Topu attığı öğrenciye tahtadaki kalıp sorulardan veya cümlelerden birini sorar.",
+      "➤ Öğrenci topu seçtiği bir arkadaşına atar.",
+      "➤ Top atılan öğrenci sorulan soruya cevap vermelidir.",
+      "➤ Ardından öğretmen, öğrencinin cevabını doğrular.",
+      "➤ Topu tutmuş ve cevabı vermiş olan öğrenci topu başka bir öğrenciye atar.",
+      "➤ Oyunun bu şekilde devam eder.",
+      "➤ Oyunun sonunda bütün öğrenciler en az bir kalıba cevap vermiş olmalıdır.",
+      "➤ Öğretmen, arka arkaya aynı soruların sorulduğunu fark ederse öğrencileri diğer kalıpları kullanmaya teşvik eder."
+    ]
+  },
+  {
+    "id": "04",
+    "title": "Sağol Dostum",
+    "ogrenmeCiktilari": [
+      "E2.3.S3. Öğrenciler, teşekkür etmeyi ifade edebilir ve buna cevap verebilirler."
+    ],
+    "hazirlik": "Öğretmen, oyunun nasıl oynanacağını gönüllü bir öğrenciyle etkileşimli olarak gösterir.",
+    "oynanis": [
+      "➤ Öğretmen elindeki nesneyi sıranın başındaki veya sonundaki bir öğrenciye verir.",
+      "➤ Öğretmenin verdiği öğrenci, nesneyi sıra arkadaşına iletir.",
+      "➤ Alan öğrenci, bu duruma yönelik “Thank you” veya “Thanks” gibi ifadeler kullanarak teşekkür eder.",
+      "➤ Veren öğrenci ise “You’re welcome” yani “Bir şey değil” der.",
+      "➤ Nesne arkadaki sıraya uzatılır ve diyalog bu şekilde devam eder.",
+      "➤ Öğretmen yanlışları düzeltir ve herkese katılımından dolayı teşekkür eder.",
+      "➤ Öğretmen, öğrencilerin oyunu anladığına kanaat getirirse, farklı sıra başlarından eş zamanlı olarak oyunu başlatabilir"
+    ]
+  },
+  {
+    "id": "05",
+    "title": "Çevir Bakalım",
+    "ogrenmeCiktilari": [
+      "E2.3.L1. Öğrenciler, talimatları anlayabilecek ve kısa, basit yönergeleri takip edebilecekler.",
+      "E2.3.S1. Öğrenciler, sınıfta gerçekleştirilen etkinliklerle ilgili birtakım komutu verir."
+    ],
+    "hazirlik": "Öğretmen, üzerinde temel talimatların yazılı olduğu bir çarkıfelek ile gelir. Öğrenciler daire olarak oturur ve öğretmen ortalarına çarkıfeleği koyar. Öğretmen, öğrencilere oyunun işleyişini anlatır ve oyunu başlatır.",
+    "oynanis": [
+      "➤ Öğretmen bu aşamadan sonra hiç müdahalede bulunmaz, sadece öğrenciler doğru cevabı bulamadıklarında onlara yardımcı olmaya çalışır.",
+      "➤ Bir öğrenci çarkıfeleği çevirir ve çarkıfelek oyunu başlar.",
+      "➤ Çeviren öğrenci kendisine gelen komutu duruma göre yapar, söyler veya gösterir. Mesela, “Sit down” komutu gelirse öğrenci ayağa kalkar sonra da oturarak hareketi gösterir. “Thank you” komutu gelirse öğrenci karşısında oturan arkadaşına teşekkür eder. “Color the picture” komutu gelirse resmi boyuyormuş gibi gösterir.",
+      "➤ Sonra sıra onun yanındaki öğrenciye geçer.",
+      "➤ Oyun, tüm öğrenciler deneyimleyene kadar devam eder."
+    ]
+  },
+  {
+    "id": "06",
+    "title": "Kulağını Dört Aç",
+    "ogrenmeCiktilari": [
+      "E2.3.L1. Öğrenciler, talimatları anlayacak ve kısa, basit yönergeleri izleyebileceklerdir.",
+      "E2.3.S1. Öğrenciler, sınıfta nasıl yapılacağını başkalarına anlatabileceklerdir.",
+      "E2.3.S2. Öğrenciler, konuşan kişiden söylenenin tekrar edilmesini isteyerek açıklama isteyebileceklerdir."
+    ],
+    "hazirlik": "Bütün öğrenciler yan yana veya çember olarak dizilecektir. Öğretmen tahtaya öğrencilerin karşısındaki kişiyi tam duyamadığı zaman kullanacağı 4 adet “Anlamı Açıklama” cümlesi yazar.",
+    "oynanis": [
+      "➤ Öğretmen sıranın başına geçer ve bir emir cümlesini sıranın başındaki öğrencinin kulağına fısıldayarak söyler.",
+      "➤ Open/Close the window/the door.",
+      "➤ Sit down.",
+      "➤ Stand up.",
+      "➤ Color the picture.",
+      "➤ Cut the paper.",
+      "➤ Draw a balloon.",
+      "➤ Paint the ball.",
+      "➤ Öğrenci doğru duyduğundan eminse duyduğunu yanındaki arkadaşının kulağına fısıldar. Emin değilse doğrulamak için öğretmene tahtada yazılı cümlelerden birini söyleyerek doğru duyduğundan emin olur.",
+      "➤ Excuse me?",
+      "➤ I’m sorry.",
+      "➤ Say that again, please.",
+      "➤ Öğretmen bu durumda cümlesini tekrar eder.",
+      "➤ Halkadaki öğrenciler sırayla birbirlerinin kulağına fısıldarlar.",
+      "➤ Halkanın sonundaki öğrenci ise verilen talimatı ayağa kalkarak gösterir."
+    ]
+  },
+  {
+    "id": "07",
+    "title": "Yolu Takip Et",
+    "ogrenmeCiktilari": [
+      "E2.3.L1: Öğrenciler, talimatları anlamak ve kısa, basit yönergeleri takip etmek için yetenekli olacaklar.",
+      "E2.3.S2: Öğrenciler, konuşmacıdan söylenenleri tekrar etmesini isteyerek açıklama isteme becerisine sahip olacaklar."
+    ],
+    "hazirlik": "Bahçeyi kullanma imkanı varsa tebeşirle öğretmen yere bir yol çizer. Tebeşir kullanılmadan ip veya bant yardımıyla da oluşturulacak yol işaretlenebilir. Öğrencilerin gözünü bağlamak içinse bir göz kapatıcısı gereklidir.",
+    "oynanis": [
+      "➤ Öğrenciler ikişerli eşleştirilir.",
+      "➤ Her çiftten bir öğrenci görmez olarak seçilir.",
+      "➤ Sırası gelen görmez yolun başına getirilir.",
+      "➤ Sırası gelen çiftin görmezinin gözü bağlanır.",
+      "➤ Diğer öğrenci ise onu yoldan çıkmasına engel olacak şekilde yönergeler (turn right, turn left, go straight) verir.",
+      "➤ Gözü bağlı öğrenci komutun tekrar edilmesini istiyorsa “excuse me?” veya “Say that again” diyebilir.",
+      "➤ Yönlendiren öğrenci yola, gözü bağlı öğrenci komutlara sadık kalmaya çalışır.",
+      "➤ Gözü bağlı öğrenci yolu tamamladığında diğer çifte geçilir ve başka bir yol çizilir."
+    ]
+  },
+  {
+    "id": "08",
+    "title": "Adımla",
+    "ogrenmeCiktilari": [
+      "E2.4.L2. Öğrenciler, 1’den 10’a kadar olan sayıları tanıyabilecekler.",
+      "E2.4.L3. Öğrenciler, eşyaların adedini ifade eder."
+    ],
+    "hazirlik": "Öğrenciler spor salonuna ya da bahçeye çıkarılır. Öğretmen, yerlere eşit aralıklı birkaç çizgi çizer. Öğrenciler yan yana sıraya girerler. Öğretmen, öğrencilerin birkaç adım önüne geçer.",
+    "oynanis": [
+      "➤ Oyun kartları karıştırılır.",
+      "➤ Yan yana sıraya giren öğrenciler, “Adımla” oyununu bireysel oynayacaklardır.",
+      "➤ Öğretmen karıştırılan desteden bir kart seçer ve üzerinde yazan soruyu öğrencilere sorar.",
+      "➤ İlk önce elini kaldıran ve soruya doğru cevap veren öğrenci bir adım atarak bir sonraki çizgiye geçer.",
+      "➤ Örneğin; öğretmen: “How many pencils are there?” diye sorduğunda sıradaki öğrenci: “There are eight pencils.” der.",
+      "➤ Eğer elini ilk kaldıran öğrenci doğru cevap veremezse sıra elini ikinci kaldıran kişiye geçmiş olur. Cevabı kimse bilemediği takdirde öğretmen, doğru cevabı söyler ve kimse adım atamaz.",
+      "➤ Sonuncu çizgiye adımını ilk atan öğrenci kazanır."
+    ]
+  },
+  {
+    "id": "09",
+    "title": "Baş Ressam",
+    "ogrenmeCiktilari": [
+      "E2.4.L1. Öğrenciler sınıftaki bazı nesnelerin isimlerini duyduğunda algılar.",
+      "E2.4.S1. Öğrenciler sınıftaki nesnelerin isimlerini doğru bir şekilde ifade eder."
+    ],
+    "hazirlik": "Öğretmen sınıf nesnelerinin bulunduğu kağıtları kare koddan indirir, çıktı alır. Sonra da keserek 11 parçaya ayırır. Bu nesneler şu şekildedir: board, book, crayon, desk, notebook, paper, pen, pencil, schoolbag, scissors, table.",
+    "oynanis": [
+      "➤ Öğrencilere çizmek anlamına gelen “draw” fiili hatırlatılır. Öğrenciler bu fiille, müfredata göre ilk defa “In the Classroom“ ünitesinde karşılaşmış olmalıdır.",
+      "➤ Öğretmen bir öğrencinin yanına giderek oyunu modeller. Birazdan dağıtacağı kağıtları takım arkadaşlarına göstermemelerini rica eder.",
+      "➤ Oyun 5-6 kişilik takımlarla oynanır.",
+      "➤ Öğrenciler 5’er 6’şar gruplanır.",
+      "➤ Öğretmen her bir öğrenciye bir nesne kağıdı ve bir A4 kağıdı dağıtır.",
+      "➤ Her takımdan bir kişi elindeki kağıtta görseli bulunan sınıf nesnesinin veya eşyasının İngilizcesini takım arkadaşlarına okur. Ardından “draw“ der.",
+      "➤ Takım arkadaşları ismi söylenen sınıf eşyasını boş A4 kağıdına çizer. Çizdiklerini lidere gösterirler. O da “yes” ya da “no” diyerek arkadaşlarına geri bildirim verir.",
+      "➤ Oyun, takımdaki başka bir öğrencinin elindeki kağıttaki yazıyı okumasıyla devam eder.",
+      "➤ Öğretmen her bir tur için süre tutabilir. Örneğin, 1 dakika."
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Sayı Dizisi",
+    "ogrenmeCiktilari": [
+      "E2.4.L2. Öğrenciler 1’den 10’a kadar olan sayıları tanıyabilecekler.",
+      "E2.4.S2. Öğrenciler 1’den 10’a kadar olan sayıları sayabilecekler."
+    ],
+    "hazirlik": "Öğrenciler 10’lu olarak iki gruba ayrılır. İki grup öğrencilerin yüzleri birbirlerine bakacak şekilde karşılıklı olarak dizilir. İki gruptaki öğrenciler de 1’den 10’a kadar aritmetik bir şekilde numaralandırılır.",
+    "oynanis": [
+      "➤ Öğretmen tarafından rastgele bir öğrenci seçilmesiyle oyun başlar.",
+      "➤ Öğretmen, seçtiği öğrencinin 1’den 10’a kadar İngilizce bir numara söylemesini ister.",
+      "➤ Öğretmen söylenilen numaraların her zaman karşı gruptaki öğrencilere söylendiğini belirtir.",
+      "➤ Söylenen numaraya sahip karşı gruptaki öğrenci bir adım öne çıkar ve bir İngilizce numara söyler. Kendi numarasını da söyleyebilir çünkü iki farklı grup vardır.",
+      "➤ Bu şekilde oyunun devamlılığı sağlanır.",
+      "➤ Öğretmen aynı sayının sürekli tekrarlanmamasını rica eder. Bu sayede gruplardaki bütün öğrencilerin oyuna katılımı sağlanır.",
+      "➤ Öğretmen, öğrencilerinin sayı-söyleniş-yazılış bağlantısını kavrayamadığını düşünüyorsa bloknotlara sayıları ve okunuşlarını yazıp gruplardaki öğrencilere dağıtabilir.",
+      "➤ Oyunu zorlaştırmak için öğrencilerin yer değiştirmesi istenebilir."
+    ]
+  }
+]
